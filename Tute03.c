@@ -1,19 +1,25 @@
-/*Exercise 3 - Repetition
-
-Write a C program to calculate the sum of the numbers from 1 to n.
-Where n is a keyboard input.
-
-e.g.
-
-n -> 100
-sum = 1+2+3+....+ 99+100 = 5050
-
-n -> 1-
-sum = 1+2+3+...+10 = 55 */
-
 #include <stdio.h>
+
 int main() {
+
+  int distance;   //define variables
+  float amount;
+
+  printf("\nEnter the distance :");   //Ask user to enter the distance
+  scanf("%d" ,&distance);
+
+  if(distance < 30 )    //condition
+  {
+    amount = (float)distance * 50;
+  }
+
+  else 
+  {
+    amount = (float)30 * 50 + (distance - 30) * 40;
+  }
   
+printf("\nAmount : %.2f" , amount);   //print amount
+
   return 0;
 }
 
