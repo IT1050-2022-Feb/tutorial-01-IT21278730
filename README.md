@@ -69,3 +69,131 @@ int main() {
 }
 ```
 Program File - [Tute04.c](Tute04.c)
+
+#include<stdio.h>
+
+int main()
+
+{
+	int mark1 , mark2; //define variables
+	float avg;
+	
+	printf("Enter the first mark :");  //Ask user to input mark1
+	scanf("%d" , &mark1);
+	
+	printf("Enter the second mark :"); //ask uer to input mark2
+	scanf("%d" , &mark2);
+	
+	avg = (float)(mark1 + mark2)/2;   //Calculation for average
+	
+	printf("Average : %.2f" , avg);   //printing average
+	
+	return 0;  //End of the process
+	
+}
+
+#include <stdio.h>
+int main() {
+  
+  int i , n , a;  //define variables
+  int sum;
+
+
+  printf("Enter a value for n :");   //ask user to input value for n
+  scanf("%d" , &n);
+
+  for(i=1 ; i <= n ; i++)
+  {
+    sum += i;  // calculation
+
+  }
+
+      printf("\nSum = %d" , sum);  //print sum
+
+  return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+
+  int distance;   //define variables
+  float amount;
+
+  printf("\nEnter the distance :");   //Ask user to enter the distance
+  scanf("%d" ,&distance);
+
+  if(distance < 30 )    //condition
+  {
+    amount = (float)distance * 50;
+  }
+
+  else 
+  {
+    amount = (float)30 * 50 + (distance - 30) * 40;
+  }
+  
+printf("\nAmount : %.2f" , amount);   //print amount
+
+  return 0;
+}
+
+#include <stdio.h>
+
+
+//function declaration
+int minimum(int no1 , int no2);
+int maximum(int no1 , int no2);
+int multiply(int no1 , int no2);
+
+int main() {
+   int no1, no2;
+   printf("Enter a value for no 1 : ");
+   scanf("%d", &no1);
+   printf("Enter a value for no 2 : ");
+   scanf("%d", &no2);
+   printf("%d ", minimum(no1, no2));
+   printf("%d ", maximum(no1, no2));
+   printf("%d ", multiply(no1, no2));
+   return 0;
+}
+
+
+//function implementation
+int minimum(int no1 , int no2)  //function to find minimum
+{
+int a;
+
+  if(no1<no2)
+  {
+    return no1;
+
+  }
+  else
+  {
+    return no2;
+  }
+
+  }
+
+  int maximum(int no1 , int no2)  //function to find maximum
+  {
+  int b;
+
+  if(no1>no2)
+  {
+  return no1;
+  }
+  else
+  {
+    
+   return no2;
+  }
+
+
+  }
+
+  int multiply(int no1 , int no2)  //function to find multiplication
+  {
+    return no1 * no2;
+  }
